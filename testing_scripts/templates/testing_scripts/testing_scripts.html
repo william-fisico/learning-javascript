@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <center>
+        <h1>Testando Javascript - Imprimindo coisas na tela</h1>
+        <br/><br/>
+    </center>
+
+    <center>
+        <h1 id="testando">Testando Javascript</h1>
+        <br/><br/>
+    </center>
+
+    <script>
+        //Coments in javascript
+        //; ends a statements
+        document.getElementById("testando").innerHTML = "Primeiro teste!!!";
+        document.write("Segundo Teste!!!");
+        window.alert("Terceiro Teste!!!");
+        console.log("Quarto Teste!!!");
+
+        //Declaracao de variaveis: var varName
+        var firstName = "William";
+
+    </script>
+
+    <br/>
+    <button type="button" onclick="document.getElementById('testando').innerHTML = 'Terceiro teste!!!'">Clique Aqui!!!</button>
+
+    <br/><br/><br/>
+    <button type="button" onclick="document.write('Fim do Teste ' + firstName + ' ')">Não Clique Aqui!!!</button>
+
+{% endblock %}
