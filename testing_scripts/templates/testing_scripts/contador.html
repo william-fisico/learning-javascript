@@ -8,17 +8,20 @@
     </center>
 
     <center>
-        <h1 id="testando">0</h1>
+        <h1 id="counter"></h1>
         <br/><br/>
     </center>
 
     <script>
-        var num = 0
+        var num = "{{ cont }}";
+        document.getElementById('counter').innerHTML = num;
     </script>
 
     <center>
-    <br/>
-    <button type="button" onclick="document.getElementById('testando').innerHTML = ++num">+</button>
-    <button type="button" onclick="document.getElementById('testando').innerHTML = --num">-</button>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button " class="btn btn-primary" onclick="document.getElementById('counter').innerHTML = ++num">+1</button>
+            <button type="button" class="btn btn-danger" onclick="document.getElementById('counter').innerHTML = --num">-1</button>
+        </div>
     </center>
+
 {% endblock %}
